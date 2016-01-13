@@ -1,0 +1,170 @@
+﻿//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+// Class      : PlayerAnimation.cs
+// Description: Logic to animate the player
+//                  - stores the texture atlas
+//                  - updates the frame
+//                  - draws it
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Snabel_Engine.Components
+{
+    public enum SpriteState
+    {
+        None, Idle, Jump, ClimbUp, ClimbDown, Right, Left
+    }
+    public class SpriteAnimator
+    {
+        // The image representing the collection of images used for animation
+        Texture2D spriteStripIdle;
+        //Texture2D spriteStripJump;
+        //Texture2D spriteStripClimbUp;
+        //Texture2D spriteStripClimbDown;
+        Texture2D spriteStripWalk;
+        Player player;
+        public  SpriteEffects flip = SpriteEffects.None;
+
+        // The scale used to display the sprite strip
+        public float scale;
+
+        // The time we display a frame until the next one
+        public float frameTime;
+        public float elapsedTime;
+
+        // The number of frames that the animation contains
+        public int frameCount;
+
+        // The index of the current frame we are displaying
+        public int currentFrame;
+
+        // The color of the frame we will be displaying
+        Color color;
+
+        // The area of the image strip we want to display
+        public Rectangle sourceRect = new Rectangle();
+
+        // The area where we want to display the image strip in the game
+        public Rectangle destinationRect = new Rectangle();
+        #region Properties
+
+        public int FrameWidth { get; set; }         // Width of a given frame
+        public int FrameHeight { get; set; }        // Height of a given frame
+        public bool Active { get; set; }            // The display state of the Animation (shown/not shown)
+        public bool Animating { get; set; }         // Stepping through frames or not        
+        public bool Looping { get; set; }           // Whether animation will keep playing after one run
+        public bool Alive { get; set; }
+
+        // Width of a given frame
+        public Vector2 Position;
+        public SpriteState spriteState;
+        #endregion
+        public void Initialize(Texture2D textureIdle, Texture2D textureWalk, Vector2 position,
+        int frameWidth, int frameHeight, int frameCount,
+        float frametime, Color color, float scale, bool looping)
+        {
+            // Keep a local copy of the values passed in
+            this.color = color;
+            this.FrameWidth = frameWidth;
+            this.FrameHeight = frameHeight;
+            this.frameCount = frameCount;
+            this.frameTime = frametime;
+            this.scale = scale;
+
+            Looping = looping;
+            Position = position;
+            spriteStripIdle = textureIdle;
+            //spriteStripJump = textureJump;
+            //spriteStripClimbUp = textureClimbUp;
+            //spriteStripClimbDown = textureClimbDown;
+            spriteStripWalk = textureWalk;
+            spriteState = SpriteState.None;
+
+            currentFrame = 0;
+
+            // Set the Animation to active by default
+            Active = true;
+            Animating = true;
+            Alive = true;
+        }
+        public void NextFrame()
+        {
+            Console.Write("Current frame %d", currentFrame);
+            Console.WriteLine();
+            currentFrame++;
+            if (currentFrame == frameCount)
+            {
+                currentFrame = 0;
+                // If we are not looping deactivate the animation
+                if (Looping == false)
+                    Active = false;
+            }
+        }
+        public void Update(GameTime gameTime)
+        {
+            // Do not update the game if we are not active
+            if (Animating == true)
+            {
+                // Update the elapsed time
+                elapsedTime += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+                // If the elapsed time is larger than the frame time
+                // we need to switch frames
+                if (elapsedTime > frameTime)
+                {
+                    // Move to the next frame
+                    currentFrame++;
+
+                    // If the currentFrame is equal to frameCount reset currentFrame to zero
+                    if (currentFrame == frameCount)
+                    {
+                        currentFrame = 0;
+                    }
+                    // Reset the elapsed time to zero
+                    elapsedTime = 0;
+                }
+            }
+            // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width
+            sourceRect = new Rectangle(currentFrame * FrameWidth, 0, FrameWidth, FrameHeight);
+
+            //// Build a destination rectangle X centered, but aligned Y coord is the bottom
+            //// centered Y would be (frameheight * scale)/2
+            //destinationRect = new Rectangle((int)Position.X - (int)(FrameWidth * scale),
+            //(int)Position.Y - (int)(FrameHeight * scale),
+            //(int)(FrameWidth * scale),
+            //(int)(FrameHeight * scale));
+            destinationRect = new Rectangle((int)Position.X,
+            (int)Position.Y,
+            (int)(FrameWidth * scale),
+            (int)(FrameHeight * scale));
+        }
+        // Draw the Animation Strip
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            
+
+            // Only draw the animation when we are active
+            if (Active)
+            {
+                if (spriteState == SpriteState.Left)
+                    spriteBatch.Draw(spriteStripWalk, destinationRect, sourceRect, color,0f, new Vector2(0,0),flip,0f);
+                //spriteBatch.Draw(animationTexture, position, PlayerRectangle, Color.White, 0f, originalPosition, 1.0f, flip, 0f);
+                else if (spriteState == SpriteState.Right)
+                    spriteBatch.Draw(spriteStripWalk, destinationRect, sourceRect, color,0f, new Vector2(0,0),flip,0f);
+                    //spriteBatch.Draw(spriteStripWalk, destinationRect, sourceRect, color);
+                
+                if (spriteState == SpriteState.Idle)
+                    spriteBatch.Draw(spriteStripIdle, destinationRect, sourceRect, color, 0f, new Vector2(0, 0), flip, 0f);
+                else if (spriteState == SpriteState.None)
+                    spriteBatch.Draw(spriteStripIdle, destinationRect, sourceRect, color, 0f, new Vector2(0, 0), flip, 0f);
+            }
+        }
+    }
+}

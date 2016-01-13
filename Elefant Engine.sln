@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snabel", "Elefant Engine\Elefant Engine\Snabel.csproj", "{332781AD-5C78-4472-8595-09B27002951A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnabelContent", "Elefant Engine\Elefant EngineContent\SnabelContent.contentproj", "{8B2503EC-103A-4E8A-8DF9-21541229C006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnabelPipeline", "SnabelPipeline\SnabelPipeline.csproj", "{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnabelEngine", "SnabelEngine1\SnabelEngine.csproj", "{615F6DC1-4923-4938-8D78-F4CDD13C01E2}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://nozzy.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Elefant\u0020Engine\\Elefant\u0020Engine\\Snabel.csproj
+		SccProjectName1 = Elefant\u0020Engine/Elefant\u0020Engine
+		SccLocalPath1 = Elefant\u0020Engine\\Elefant\u0020Engine
+		SccProjectUniqueName2 = Elefant\u0020Engine\\Elefant\u0020EngineContent\\SnabelContent.contentproj
+		SccProjectName2 = Elefant\u0020Engine/Elefant\u0020EngineContent
+		SccLocalPath2 = Elefant\u0020Engine\\Elefant\u0020EngineContent
+		SccProjectUniqueName3 = SnabelPipeline\\SnabelPipeline.csproj
+		SccProjectName3 = SnabelPipeline
+		SccLocalPath3 = SnabelPipeline
+		SccProjectUniqueName4 = SnabelEngine1\\SnabelEngine.csproj
+		SccProjectName4 = SnabelEngine1
+		SccLocalPath4 = SnabelEngine1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Debug|Xbox 360 = Debug|Xbox 360
+		Debug|Zune = Debug|Zune
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+		Release|Xbox 360 = Release|Xbox 360
+		Release|Zune = Release|Zune
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{332781AD-5C78-4472-8595-09B27002951A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Debug|x86.ActiveCfg = Debug|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Debug|x86.Build.0 = Debug|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Debug|Zune.ActiveCfg = Debug|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Release|Any CPU.ActiveCfg = Release|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Release|Mixed Platforms.Build.0 = Release|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Release|x86.ActiveCfg = Release|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Release|x86.Build.0 = Release|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Release|Xbox 360.ActiveCfg = Release|x86
+		{332781AD-5C78-4472-8595-09B27002951A}.Release|Zune.ActiveCfg = Release|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Debug|x86.ActiveCfg = Debug|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Debug|Zune.ActiveCfg = Debug|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Release|Any CPU.ActiveCfg = Release|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Release|x86.ActiveCfg = Release|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Release|Xbox 360.ActiveCfg = Release|x86
+		{8B2503EC-103A-4E8A-8DF9-21541229C006}.Release|Zune.ActiveCfg = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|Any CPU.Build.0 = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|x86.ActiveCfg = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|x86.Build.0 = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|Xbox 360.Build.0 = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|Zune.ActiveCfg = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Debug|Zune.Build.0 = Debug|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|Any CPU.ActiveCfg = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|Any CPU.Build.0 = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|x86.ActiveCfg = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|x86.Build.0 = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|Xbox 360.ActiveCfg = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|Xbox 360.Build.0 = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|Zune.ActiveCfg = Release|x86
+		{C5C9ECF5-1FAB-4F92-A980-CF417AD64059}.Release|Zune.Build.0 = Release|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Debug|x86.ActiveCfg = Debug|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Debug|x86.Build.0 = Debug|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Debug|Zune.ActiveCfg = Debug|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Release|Any CPU.ActiveCfg = Release|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Release|Mixed Platforms.Build.0 = Release|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Release|x86.ActiveCfg = Release|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Release|x86.Build.0 = Release|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Release|Xbox 360.ActiveCfg = Release|x86
+		{615F6DC1-4923-4938-8D78-F4CDD13C01E2}.Release|Zune.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

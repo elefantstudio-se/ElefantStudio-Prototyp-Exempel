@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="Snabel_Engine.Armory">
+    <Name>Awesome Store</Name>
+    <ArmorList>
+      <Item>Armor1</Item>
+    </ArmorList>
+    <WeaponList>
+      <Item>Weapon1</Item>
+    </WeaponList>
+  </Asset>
+</XnaContent>

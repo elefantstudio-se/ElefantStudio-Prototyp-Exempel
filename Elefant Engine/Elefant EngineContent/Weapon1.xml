@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <!-- TODO: replace this Asset with your own XML asset data. -->
+  <Asset Type="Snabel_Engine.Weapon">
+    <Name>Test Weapon</Name>
+    <Price>100</Price>
+    <Damage>20</Damage>
+  </Asset>
+</XnaContent>
