@@ -1,2 +1,3 @@
 # ElefantStudio-Prototyp-Exempel
-xna engine, exempel. Test miljö...
+
+XNA, C#, Testmiljö, provar saker här innan det impleteras i annat.
